@@ -64,7 +64,7 @@ gulp.task('sass', function () {
 
 
 gulp.task('imgs', () =>
-  gulp.src('src/imgs/*')
+  gulp.src('src/imgs/**/*.*')
   .pipe(imagemin())
   .pipe(gulp.dest('dist/imgs'))
 );
@@ -75,13 +75,15 @@ gulp.task('copy', () => gulp.src('src/js/lib/*.js')
 gulp.task('serve', ['sass', 'scripts', 'imgs', 'assemble', 'copy'], function () {
 
   browserSync.init({
-    server: "./dist"
+    server: "./dist",
+    port: 2014
   });
 
   gulp.watch("src/css/**/*.scss", ['sass']);
   gulp.watch("dist/css/**/*.css").on('change', reload);
   gulp.watch("src/js/**/*.js", ['scripts']);
   gulp.watch("src/js/lib/*.js", ['copy']);
+  gulp.watch("src/imgs/**/*.*", ['imgs']);
   gulp.watch("dist/js/**/*.js").on('change', reload);
   gulp.watch("src/html/**/*.hbs", ['assemble']);
   gulp.watch("dist/*.html").on('change', reload);

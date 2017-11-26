@@ -38,7 +38,7 @@ module.exports = {
 };
 
 if (env !== 'production') {
-    module.exports.watch = true;
+    // module.exports.watch = true;
 } else {
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.optimize.UglifyJsPlugin({

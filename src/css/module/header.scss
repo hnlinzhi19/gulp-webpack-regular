@@ -1,0 +1,81 @@
+.page-header {
+  height: 85px;
+  background: #fff;
+  &__inner {
+    width: 1200px;
+    margin: 0 auto;
+    @extend %clearfix;
+  }
+  &__logo {
+    padding-top: 15px;
+    margin-right: 77px;
+    display: block;
+  }
+  &__nav {
+    @extend %clearfix;
+    padding-right: 20px;
+    li {
+      float: left;
+      padding-top: 5px;
+      margin-right: 45px;
+      a {
+        display: block;
+        font-size: 16px;
+        color: #666666;
+        padding: 0 10px;
+        line-height: 62px + 16;
+        &:hover,
+        &:active {
+          border-bottom: 3px solid #00e290;
+        }
+        &.active {
+          border-bottom: 3px solid #00e290;
+        }
+      }
+    }
+  }
+  &__search {
+    padding-top: 27px;
+    @extend %clearfix;
+    input {
+      display: block;
+      float:left;
+      width: 238px;
+      height: 33px;
+      border-radius: 16px;
+      border: solid 1px #cccccc;
+      margin-right:10px;
+    }
+    a {
+      display: block;
+      float:left;
+      width: 66px;
+      height: 33px;
+      background-color: #00e290;
+      border-radius: 16px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 33px;
+    }
+  }
+  &__login{
+    font-size: 14px;
+    color: #666666;
+    line-height: 14px;
+    padding-top: 35px;
+    @extend %clearfix;
+    a{
+      font-size: 14px;
+      color: #666666;
+      display: block;
+      float:left;
+    }
+    span{
+      display: block;
+      float:left;
+      padding: 0 10px;
+    }
+  }
+}
